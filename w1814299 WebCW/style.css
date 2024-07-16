@@ -1,0 +1,102 @@
+.wrapper{
+	margin:auto;
+	width:80%;
+}
+.top{
+	padding:50px;
+	background-color:#f89374;
+	height:70px;
+}
+.logoleft{
+	width:100px;
+	height:100px;
+	float:left;
+}
+.logoright{
+	width:100px;
+	height:100px;
+	float:right;
+}
+#queryForm{
+	display:none;
+}
+h1{
+	margin:0px;
+	color:black;
+	text-align:center;
+}
+.banner{
+	background-color:black;
+}
+.banner img{
+	height:650px;
+	width:100%;
+}
+.banner img:hover{
+	opacity:0.5
+}
+.section{
+	background-color:#CCB944;
+	padding:5px;
+	font-size:1em;
+}
+.section h1{
+	padding-top: 20px;
+	color:#B846B8;
+	font-family:arial;
+}
+.footer{
+	background-color: green;
+	font-size: 20px;
+	color: white;
+	font-family: Arial;
+	width: 100%;
+	height: 65px;
+}
+.editor{
+	float: left;
+	margin: 5px;
+}
+.footer a{
+	text-decoration: none;
+	color: white;
+	margin-top: 10px;
+	padding: 10px;
+}
+.footer a:hover{
+	color: blue;
+	text-decoration: underline;
+}
+.footer img{
+	width: 30px;
+	height:35px;
+	float:right;
+	margin: 15px;
+}
+.links{
+	width: 100%;
+	background-color: red;
+	margin: auto;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.links a{
+	text-decoration: none;
+	color: white;
+}
+.links a:hover{
+	color: blue;
+}
+.links ul{
+	margin: 0;
+}
+.rules{
+	width: 30%;
+	height: 20px;
+}
+.rules p{
+	float: left;
+	margin: 0;
+	color: red;
+}

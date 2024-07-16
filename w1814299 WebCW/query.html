@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>Query</title>
+    <!-- this is where my stylesheets are linked -->
+	<link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="nav.css" type="text/css">
+	<link rel="shortcut icon" href="img/football.png" type="image/x-icon">
+</head>
+<body>
+    <!-- this contains the links for the webpage -->
+	<nav>
+
+		<a href="index.html">Home</a>
+		<a href="ContentsPage.html">Contents</a>
+		<a href="https://w1830270.users.ecs.westminster.ac.uk/webDev/buyproducts.html">Buy Products</a>
+		<a href="https://w1864310.users.ecs.westminster.ac.uk/webDev/images.html">images</a>
+        <a href="https://w1864310.users.ecs.westminster.ac.uk/webDev/QuizGame.html">Quiz</a>
+	</nav>
+	<br><br>
+	<div class="top">
+    <!-- the logos and header has been added in this section -->
+		<img class="logoleft" src="img/football.png" alt="Logo">
+		<img class="logoright" src="img/football.png" alt="Logo">
+		<br>
+		<h1>Queries</h1>
+	</div>
+
+
+
+	<div class="section">
+		<p> Welcome to the query page where you are able to contact us and inform us of any problems that you are worried about or get some information</p>
+		<p> PLEASE FILL THE REGISTRATION FORM UNDERNEATHE THANK YOU:</P>
+        <!-- This allows the form to be sent by mail using this  -->
+	<form action="mailto:w1814299@my.westminster.ac.uk" enctype="text/plain" method="post">
+         <!-- this section containts the contents of the form -->
+		<fieldset>
+	<div id="queryForm">
+	<div class="rules">
+		<p>*Can only contain letters</p>
+	</div>
+		<label for="Name">Name:</label>
+		<input type="text" name="Name" id="Name">
+		<br><br>
+	<div class="rules">
+		<p>*Can only contain letters/numbers and @</p>
+	</div>
+		<label class="email" for="email">Email:</label>
+		<input class="Colorblack" type="email" name="email" id="email">
+		<br>
+		<p> Select the theme of your query: </p>
+		<input type="radio" name="Football" id="Football" value="3">
+		<label for="football">Football</label>
+		<br>
+		<input type="radio" name="Baseball" id="Baseball" value="4">
+		<label for="Baseball">Baseball</label>
+		<br>
+		<input type="radio" name="Merch" id="Merch" value="5">
+		<label for="Merch">Merch</label>
+		<br>
+		<input type="radio" name="complaint" ld="complaint" value="6">
+		<label for="complaint">Complaint</label>
+		<br>
+		<input type="radio" name="Other" id="Other" value="4">
+		<label for="Other">Other</label>
+		<br><br>
+    <div class="rules"> 
+         <p>*Can only contain letters/numbers</p>
+    </div>
+		<label for="comments">Any queries </label><br>
+		<textarea name="comments" id="comments" cols="40" rows="5" placeholder="Enter any queries here."></textarea>
+		<br>
+		<button type="button" id="checkQuery" class="checkingQuery">CheckQuery</button>
+		<button type="button" class="checkingQuery">Edit Query</button>
+		<br><br>
+	</div>
+    <div id="queryInfo">
+		<button type="button" id="editQuery">Start</button>
+        <!-- the send query button has been changed from the type button to submit because it is sending the form -->
+		<button type="submit" id="SendQuery">Send Query</button>
+	</div>
+		</fieldset>		
+		</form>
+	</div>	
+	<script>
+		var letters;
+		var checkQuery;
+        // this section was interfering with the start button and was not working
+        // var option1 = getRadioValue(document.getElementById("Football"));
+		// var option2 = getRadioValue(document.getElementById("Baseball"));
+		// var option3 = getRadioValue(document.getElementById("Merch"));
+		// var option4 = getRadioValue(document.getElementById("Complaint"));
+		// var option5 = getRadioValue(document.getElementById("Other"));
+        // This section is for checking if the query details are valid
+		document.getElementById("checkQuery").addEventListener("click", function() {
+        // This section checks if the field named "name" and "email" has the following values "
+		nameAllowedCharacters = /^[A-Za-z]+$/;
+		emailAllowedCharacters = /^[0123456789A-Za-z@.]+$/;
+        // This section is to target the specific fields by thier id
+		checkName = document.getElementById("Name");
+		checkEmail = document.getElementById("email");
+        //if statement to check the values
+		if (checkName.value.match(nameAllowedCharacters) && checkEmail.value.match(emailAllowedCharacters)) {
+        // if correct alert should say correct
+			alert("correct click send Qeury to send the form.");
+
+		} else {
+        // The else statement will display this.
+		alert("Name or Email has not been filled in correctly. Please try again and press start to try again.");
+
+		}
+		})
+        // function to get radio value
+		function getRadioValue( radioArray ) {
+		var i;
+
+  		for ( i = 0; i < radioArray.length; i++ ) {
+
+    		if ( radioArray[ i ].checked ) { 
+
+         		return radioArray[ i].value;
+
+    		}	
+
+    	}
+   		return "";
+
+		}
+		function getSelectedValue(selectList){
+
+			return selectList[selectList.selectedIndex].value;
+
+		}
+		document.getElementById("editQuery").addEventListener("click", function() {
+
+		document.getElementById("queryForm").style.display = "block";
+
+		document.getElementById("queryInfo").style.display = "none";
+        // if (option1.checked || option2.checked || option3.checked || option4.checked || option5.checked) {
+        //     return true;
+        // } else {
+        //     alert("You need to select theme of query")
+        // }
+		});
+        //function for the form to dissapear and appear after clicking the buttons
+		document.getElementById("checkQuery").addEventListener("click", function(){
+		document.getElementById("queryForm").style.display = "none";
+		document.getElementById("queryInfo").style.display = "block";
+		});
+
+	</script>
+        <!-- This section contains the footer class which holds the link to editors page and an image that is an anchor used to go on top -->
+		<div class="footer">
+        <!-- This section contains editors pagee link and gototop img  -->
+			<a class="editor" href="editorsPage.html">Page Developer</a>
+			<a href="#"><img src="img/gototop.png" alt="Go to top"></a>
+		</div>
+</body>
+</html>

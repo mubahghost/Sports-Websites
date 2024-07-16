@@ -1,0 +1,28 @@
+body{
+	background-color:#20a9b5;
+	margin:0;
+}
+
+nav{
+    overflow: hidden;
+    background-color: #445;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    height: 36px;
+	padding-top: 10px;
+}
+
+nav a{
+    color: #f2f2f2;
+    font-size: 20px;
+	padding: 10px 20px;
+	margin: 10px;
+	text-decoration: none;
+}
+
+nav a:hover {
+    background: #bbb;
+    color: black;
+}
